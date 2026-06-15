@@ -1,0 +1,17 @@
+# One-command try-it-out: `docker compose up --build`
+# Builds the image, generates the synthetic demo case, runs the agent, and prints
+# the triage report. Pass an API key in the environment to enable the LLM driver
+# (either provider works).
+services:
+  sift-agent:
+    build: .
+    environment:
+      # Optional: set one to drive the LLM path. Leave unset for the deterministic policy.
+      ANTHROPIC_API_KEY: ${ANTHROPIC_API_KEY:-}
+      OPENAI_API_KEY: ${OPENAI_API_KEY:-}
+    # The default command in the Dockerfile runs the demo with the policy driver.
+    # To use the LLM driver when a key is set, uncomment one of:
+    # command: ["python", "-m", "sift_agent", "--image", "cases/demo_stomp/case.img",
+    #           "--usnjrnl-record", "42", "--driver", "claude", "--log", "logs/session.jsonl"]
+    # command: ["python", "-m", "sift_agent", "--image", "cases/demo_stomp/case.img",
+    #           "--usnjrnl-record", "42", "--driver", "openai", "--log", "logs/session.jsonl"]

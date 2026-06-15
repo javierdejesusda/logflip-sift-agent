@@ -1,0 +1,25 @@
+{
+  "evil_name": null,
+  "evil_confirmed": false,
+  "evil_evidence": [
+    {
+      "record_type": "logfile_reverse_replay",
+      "inversion_complete": "True",
+      "walked_lsn_count": "1"
+    },
+    {
+      "record_type": "si_vs_fn_delta",
+      "si_fn_delta_nonzero": "True",
+      "si_created": "111111111",
+      "fn_created": "11111"
+    }
+  ],
+  "tool_family": null,
+  "confidence": 0.0,
+  "db_content_hash": "2b8d87f73809b167dcbf4789cc2f630ce1c5d8ca3f232f0b5e806d70e4dcaf04",
+  "original_timestamp": "00e1f5050000000000c2eb0b0000000000a3e111000000000084d7170000000000000000000000000000000000000000",
+  "tampered_timestamp": "c76b9f06000000008ed73e0d000000005543de13000000001caf7d1a0000000000000000000000000000000000000000",
+  "scope_bounded": "The $LogFile/$UsnJrnl rollover window is 4-12h on active volumes. By contrast, median attacker dwell is 10+ days; post-incident imaging delay is 24-72h or more. Therefore long-dwell coverage is NOT claimed; scoped to within-rollover-window events.",
+  "key_class": "demo",
+  "hmac": "fe4b877053297bbf073f790ad9603cfde5e3618508f5b0c6bac7b2191f400a4e"
+}

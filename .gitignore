@@ -1,0 +1,27 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.eggs/
+build/
+dist/
+.venv/
+venv/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# Secrets and keys (engagement keys are never committed)
+.env
+*.key
+*.pem
+
+# Generated runtime output. Curated sample session logs are committed for judges:
+# a deterministic policy run and an LLM-driver run that shows token usage.
+logs/*.jsonl
+!logs/sample_session.jsonl
+!logs/sample_session_openai.jsonl
+reports/
+*.tmp
