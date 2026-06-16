@@ -52,6 +52,8 @@ flowchart TD
     E --> F["signed leaves + structured JSONL session log<br/>(finding -> tool execution -> leaf)"]
 ```
 
+![logflip-sift-agent architecture and trust boundaries](docs/architecture-diagram.png)
+
 Full write-up and the architectural-vs-prompt boundary table: [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md).
 
 ## Quickstart (no API key, deterministic policy driver)

@@ -34,6 +34,8 @@ flowchart TD
     F --> G["signed leaf_*.json + JSONL session log<br/>finding -> produced_by_seq -> tool execution -> leaf"]
 ```
 
+![Architecture and trust boundaries: a read-only NTFS image flows through sift-mcp (Boundary 1), the unmodified logflip engine (Boundary 2), and the verdict guard (Boundary 3) to signed output; the sift-agent loop sits above as the prompt boundary and only sequences the read-only tools](architecture-diagram.png)
+
 ## Data flow
 
 1. The agent (Claude or policy) calls `scan_image`, which runs `logflip`'s
